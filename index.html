@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container1">
+        <div class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>  
+        <div class="left">
+            Music <br> has<br> healing <br>power
+        </div>
+        <div class="right">
+            <h2>Click to play music</h2>
+            <img src="media/play.png" id="icon">
+        </div>  
+    </div>
+    <audio id="audio1"> 
+        <source src="media/audio.mp3" type="audio/mp3">
+    </audio>
+    <div class="play">
+
+    </div>
+    <script>
+        var audio=document.getElementById("audio1");
+        var icon=document.getElementById("icon");
+        
+        icon.onclick=function(){
+            if(audio.paused){
+                audio.play();
+                icon.src="media/pause.png";
+                h1.setAttribute('id','play');
+                h1.appendChild(text);
+                document.getElementById('play').appendChild(h1);
+
+            }else{
+                audio.pause();
+                icon.src="media/play.png";
+            }
+        }
+    </script>    
+</body>
+</html>
